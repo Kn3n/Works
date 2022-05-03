@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Todo</title>
 <link rel="stylesheet" href="style/style.css" />
+<script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+<script src="manifest.json"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
     if ("serviceWorker" in navigator) {
       // Use the window load event to keep the page load performant
       window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js");
+        navigator.serviceWorker.register("sw.js");
       });
     }
     </script>
